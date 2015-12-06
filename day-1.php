@@ -1,6 +1,6 @@
 <?php
 
-include('input/day-1.php');
+$input = file_get_contents('input/day-1.php');
 
 $total = 0;
 

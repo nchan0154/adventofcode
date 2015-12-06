@@ -10,6 +10,7 @@ while( substr($hash,0,6) !== '000000' )
     $i++;
 }
 
+//it increments after the check, so minus 1!
 echo $i - 1;
 echo '<br>'.md5($key. ($i - 1) );
 ?>

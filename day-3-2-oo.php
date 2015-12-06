@@ -1,6 +1,6 @@
 <?php
 
-include('input/day-3.php');
+$input = file_get_contents('input/day-3.php');
 
 $town = [];
 
