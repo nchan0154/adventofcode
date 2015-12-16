@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<head>
-</head>
-<body><pre id='input'  style="word-wrap: break-word; white-space: pre-wrap;">
 NOT dq -> dr
 kg OR kf -> kh
 ep OR eo -> eq
@@ -340,18 +336,4 @@ hv OR hu -> hw
 NOT hj -> hk
 gj RSHIFT 3 -> gl
 fo RSHIFT 3 -> fq
-he RSHIFT 2 -> hf</pre>
-<script>
-var input = document.getElementById('input').innerText.split('\n'); 
-var wires = [];
-
-for ( var i = 0; i < input.length; i++){
-	var wires = (/-> (.+)/.exec(input[i]))[1];
-
-	
-}
-
-
-</script>
-
-</body>
+he RSHIFT 2 -> hf

@@ -1,4 +1,6 @@
 <?php
+//need more memory, lol.
+ini_set('memory_limit', '500M');
 
 //Using that permutations function from Day 9! Starting off by manipulating the text input using good old search and replace.
 function pc_permute($items, $perms = array( )) {
@@ -39,7 +41,7 @@ foreach(file('input/day-13.txt', FILE_IGNORE_NEW_LINES) as $input){
     $happiness[$to][$from] = $happiness[$from][$to];
 }
 
-//adding me in
+//adding me in! this works but causes C9 to explode, oops!
     $people[] = 'Me';
     for ($i = 0; $i < count($people); $i++){
         $name = $people[$i];
@@ -56,15 +58,11 @@ foreach ($permutations as $perm){
         $happinessChange += $happiness[$perm[$i]][$perm[$i+1]];
     }
     //the table is circular! This tripped me up
-    $happinessChange += $happiness[$perm[0]][$perm[7]];
+    $happinessChange += $happiness[$perm[0]][$perm[count($people)-1]];
     array_push($seating, $happinessChange);
     $happinessChange = 0;
 }
 
 
-asort($seating);
-//first
-echo reset($seating) . "<br>";
-//last
-echo end($seating);
+echo max($seating);
 ?>
